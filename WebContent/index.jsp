@@ -8,6 +8,8 @@
 </head>
 <body>
 	<h1> Crocodile Welcome Page JSP</h1>
-	<input type="button" value="Start game"/>
+	<form action="game" method="post">
+		<input type="submit" name="startButton" value="Start game"/>
+	</form>
 </body>
 </html>
