@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.Collection;
 import java.util.Enumeration;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,6 +33,9 @@ public class GameController extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		if (null != request.getParameter("startButton")){
 			response.getWriter().append("  Start game " );
+			RequestDispatcher rd = request.getRequestDispatcher
+				    ("pages/jsp/Game.jsp");
+			rd.forward(request, response);
 		}
 	}
 
